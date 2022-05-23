@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sudhirguravdeploytoaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sudhirguravdeploytoaks
+  template:
+    metadata:
+      labels:
+        app: sudhirguravdeploytoaks 
+    spec:
+      containers:
+        - name: sudhirguravdeploytoaks 
+          image: sudhirnewacr.azurecr.io/sudhirguravdeploytoaks
+          ports:
+          - containerPort: 80
